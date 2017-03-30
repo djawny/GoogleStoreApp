@@ -2,6 +2,7 @@ package com.sdaacademy.jawny.daniel.googlestoreapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -33,6 +34,7 @@ public class InfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_info);
         ButterKnife.bind(this);
         setViews();
+        showLogsInDebug();
     }
 
     private void setViews() {
@@ -42,5 +44,16 @@ public class InfoActivity extends AppCompatActivity {
         mFlavor.setText(String.format("Flavor: %s", BuildConfig.FLAVOR));
         mVersionCode.setText(String.format("VersionCode: %d", BuildConfig.VERSION_CODE));
         mVersionName.setText(String.format("VersionName: %s", BuildConfig.VERSION_NAME));
+    }
+
+    private void showLogsInDebug() {
+        if (BuildConfig.DEBUG) {
+            Log.i("test", "ApplicationId: " + BuildConfig.APPLICATION_ID);
+            Log.i("test", "BuildType: " + BuildConfig.BUILD_TYPE);
+            Log.i("test", "Debug: " + BuildConfig.DEBUG);
+            Log.i("test", "Flavor: " + BuildConfig.FLAVOR);
+            Log.i("test", "VersionCode: " + BuildConfig.VERSION_CODE);
+            Log.i("test", "VersionName: " + BuildConfig.VERSION_NAME);
+        }
     }
 }
