@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GoogleStoreApp</string>
+    <string name="app_version">aplikacja darmowa</string>
 </resources>

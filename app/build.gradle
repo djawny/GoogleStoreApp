@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.sdaacademy.jawny.daniel.googlestoreapp"
+        applicationId "com.sdaacademy.DanJawApp"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
@@ -15,6 +15,20 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix ".debug"
+            debuggable true
+        }
+    }
+    productFlavors {
+        free {
+            applicationIdSuffix ".demo"
+            versionNameSuffix "-free"
+        }
+        paid {
+            applicationIdSuffix ".full"
+            versionNameSuffix "-paid"
         }
     }
 }
