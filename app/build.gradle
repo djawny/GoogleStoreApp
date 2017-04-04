@@ -25,10 +25,12 @@ android {
         free {
             applicationIdSuffix ".demo"
             versionNameSuffix "-free"
+            resValue "string", "app_version", "aplikacja darmowa"
         }
         paid {
             applicationIdSuffix ".full"
             versionNameSuffix "-paid"
+            resValue "string", "app_version", "aplikacja platna"
         }
     }
 }
